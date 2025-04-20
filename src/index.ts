@@ -9,7 +9,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-
+console.log("db connection", process.env.DB_HOST);
 // Create an instance of NewsApiClient
 const getNews = new NewsPostService();
 const newsApiClient = new NewsApiClient();

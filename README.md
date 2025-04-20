@@ -21,20 +21,18 @@ Before running the application, ensure you have the following installed:
 
 Clone tversion: "3.8"
 services:
-  postgres:
-    image: postgres:14
-    container_name: postgres_container
-    environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: webz
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+postgres:
+image: postgres:14
+container_name: postgres_container
+environment:
+POSTGRES_USER: root
+POSTGRES_PASSWORD: root
+POSTGRES_DB: webz
+ports: - "5432:5432"
+volumes: - postgres_data:/var/lib/postgresql/data
 
 volumes:
-  postgres_data:
+postgres_data:
 he repository to your local machine:
 
 ```bash
@@ -74,7 +72,7 @@ npm install
 
 Create a `.env` file in the root directory and add the following variables:
 
-````properties
+```bash
 # Webz.io API Key
 WEBZ_API_KEY=your_webz_api_key_here
 
@@ -88,13 +86,18 @@ DB_NAME=webz
 
 Replace `your_webz_api_key_here`, `your_db_user`, and `your_db_password` with your actual API key and database credentials.
 
----
+```
 
 ### 5. Compile TypeScript Files
-Compile the TypeScript files to JavaScript:
+
+Compile the TypeScript files to
+JavaScript:
+
 ```bash
 npx tsc
-````
+```
+
+---
 
 ---
 
